@@ -8,9 +8,10 @@ export default function Task16() {
     <View style={{ flex: 1, backgroundColor: "white", marginTop: 50, alignItems: "center" }}>
       
       <Button
-        title="Show"
-        onPress={showName}
+        title={showName ? "Hide" : "Show"}
+        onPress={() => setShowName(!showName)}
       />
+
 
       {showName && (
         <Text style={{ marginTop: 20, fontSize: 18 }}>
